@@ -1,5 +1,18 @@
 ![ML4Sci x DeepLense](/Images_for_README/DEEPLENSE.png)
 
+## 🚀 Quick Start
+
+Follow these steps to set up the project quickly:
+
+```bash
+git clone https://github.com/ML4SCI/DeepLense.git
+cd DeepLense
+
+python -m venv venv
+source venv/bin/activate   # Windows: venv\Scripts\activate
+
+pip install -r requirements.txt
+
 ## 1. Background
 
 We at DeepLense explore cutting-edge Machine Learning techniques for the study of Strong Gravitational Lensing and Dark Matter Sub-structure. We use both simulated and real lensing images, for a variety of tasks, using a variety of techniques.
@@ -35,10 +48,75 @@ All datasets are constructed using Lenstronomy, by Michael W. Toomey, as present
 |Model 3 dataset|Sheared Isothermal Elliptical lens | Sérsic light profile | HST's observation characteristics, Axion DM and CDM substructure appended to base halo to create 3 sub-structure classes
 |Model 4 dataset|Two Isothermal Elliptical lenses | Three-channel **real galaxy** images | Euclid's observation characteristics, Axion DM and CDM substructure appended to base halo to create 3 sub-structure classes
 
+---
+
+## 📦 Dataset Setup
+
+This project uses simulated gravitational lensing datasets generated using Lenstronomy.
+
+### 1. Download / Generate Dataset
+
+Datasets can be generated using the official simulation repository:
+
+https://github.com/mwt5345/DeepLenseSim/tree/main/
+
+Follow the instructions in that repository to generate datasets corresponding to:
+- Model 1
+- Model 2
+- Model 3
+- Model 4
+
+*(If pre-generated datasets are available, they can be linked here in the future.)*
+
+---
+
+### 2. Directory Structure
+
+After downloading or generating the dataset, organize it as follows:
+DeepLense/
+│── data/
+│   └── dataset_name/
+│       ├── train/
+│       ├── test/
+│       └── labels/
+
+---
+
+### 3. Configure Dataset Path
+
+Ensure the dataset path is correctly set in the training scripts. For example:
+
+```python
+data_dir = "./data/dataset_name/"
+
 ## 3. Projects
+
+This section contains various research and implementation projects developed under DeepLense, primarily through GSoC contributions. Each project focuses on different machine learning approaches applied to gravitational lensing datasets.
+
+👉 Navigate to individual project folders for code, training scripts, and detailed instructions.
+
 
 ![Project compositions](/Images_for_README/DeepLense%20project%20composition.jpeg)
 ![Techniques compositions](/Images_for_README/DeepLense%20ML%20Techniques.jpeg)
+
+---
+
+### 🧭 How to Use These Projects
+
+1. Choose a project from the table below  
+2. Navigate to its repository folder  
+3. Check for:
+   - `train.py` or `main.py`
+   - notebooks (`.ipynb`)
+   - specific README (if available)
+
+4. Run the project using:
+
+```bash
+python train.py
+```
+
+⚠️ Note: Each project may have different dependencies and dataset requirements.
 
 | Project Name | Contributor | Task | ML Techniques | Repository Link | Blog Post |
 |---|---|---|---|---|---|
