@@ -39,6 +39,45 @@ In DeepLense, we’re mainly dealing with three kinds of simulated Dark Matter:
 
 ## 2. Datasets
 
+## 2.1 Dataset Setup
+
+To run the models in this repository, you need to download and
+properly organize the datasets.
+
+### 📥 Download
+
+Datasets can be generated or downloaded from:
+https://github.com/mwt5345/DeepLenseSim
+
+(Refer to the repository for instructions specific to each dataset.)
+
+### 📁 Directory Structure
+
+After downloading, organize the dataset as follows:
+DeepLense/
+│── data/
+│   ├── model_1/
+│   ├── model_2/
+│   ├── model_3/
+│   └── model_4/
+│
+│── scripts/
+│── models/
+│── README.md
+
+### ⚙️ Preprocessing
+
+- Ensure images are in the expected format (e.g., `.npy`, `.png`)
+- Normalize or preprocess data if required by specific scripts
+- Check individual project folders for custom preprocessing steps
+
+### ▶️ Running Training
+
+Example:
+
+```bash
+python train.py --data_path ./data/model_1
+
 All datasets are constructed using Lenstronomy, by Michael W. Toomey, as presented in their [repository](https://github.com/mwt5345/DeepLenseSim/tree/main/).
 
 | Dataset | Lens model | Light Profile | Modelling strategy |
